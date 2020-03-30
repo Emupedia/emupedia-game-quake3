@@ -64,7 +64,7 @@
 
 				window.addEventListener('resize', resizeViewport);
 
-				var location = window.location.host + dirname(window.location.pathname);
+				var location = window.location.host + (~window.location.pathname.indexOf('/index.html') ? dirname(window.location.pathname) : window.location.pathname);
 				console.log(location);
 
 				// merge default args with query string args
