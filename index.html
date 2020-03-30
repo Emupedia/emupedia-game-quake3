@@ -65,7 +65,6 @@
 				window.addEventListener('resize', resizeViewport);
 
 				var location = window.location.host + (~window.location.pathname.indexOf('/index.html') ? dirname(window.location.pathname) : window.location.pathname);
-				console.log(location);
 
 				// merge default args with query string args
 				var args = ['+set', 'fs_cdn', location, '+set', 'sv_master1', 'master.quakejs.com:27950'];
