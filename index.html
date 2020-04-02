@@ -67,7 +67,7 @@
 				var location = window.location.host + (~window.location.pathname.indexOf('/index.html') ? dirname(window.location.pathname) : window.location.pathname);
 
 				// merge default args with query string args
-				var args = ['+set', 'fs_cdn', location, '+set', 'sv_master1', 'master.quakejs.com:27950'];
+				var args = ['+set', 'fs_cdn', location, '+set', 'sv_master1', 'master.ioquake3.org:27950'];
 				args.push.apply(args, getQueryCommands());
 				ioq3.callMain(args);
 			};
