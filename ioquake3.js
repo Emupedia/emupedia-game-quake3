@@ -6091,16 +6091,16 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   					'+set', 'in_mouse', '0',
   				])
   			}
-  			if(window.location.hostname.match(/quake\.games/i)) {
+  			//if(window.location.hostname.match(/quake\.games/i)) {
   				args.unshift.apply(args, [
   					'+set', 'net_socksServer', 'proxy.quake.games',
   					'+set', 'net_socksPort', '443',
   				])
-  			} else {
+  			/*} else {
   				args.unshift.apply(args, [
   					'+set', 'net_socksServer', window.location.hostname,
   				])
-  			}
+  			}*/
   			return args
   		},updateVideoCmd:function () {
   			var update = 'set r_fullscreen %fs; set r_mode -1; set r_customWidth %w; set r_customHeight %h; vid_restart; '
@@ -6806,9 +6806,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   		}
   		Object.assign(Module, {
   			websocket: Object.assign(Module.websocket || {}, {
-  				url: window.location.search.includes('https://') || window.location.protocol.includes('https')
-  				? 'wss://'
-  				: 'ws://'
+  				url: window.location.search.includes('https://') || window.location.protocol.includes('https') ? 'wss://' : 'ws://'
   			})
   		})
   		window.addEventListener('resize', SYS.resizeViewport)
