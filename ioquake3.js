@@ -6078,23 +6078,23 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   				args.push.apply(args, val)
   			}
   			args.unshift.apply(args, [
-  				'+set', 'sv_dlURL', '"' + location + '/assets"',
+  				'+set', 'sv_dlURL', '"https://emupedia.net/emupedia-data-quake3"',
   				'+set', 'r_fullscreen', window.fullscreen ? '1' : '0',
   				'+set', 'r_customHeight', '' + window.innerHeight,
-  				'+set', 'r_customWidth', '' + window.innerWidth,
+  				'+set', 'r_customWidth', '' + window.innerWidth
   			])
   			if(navigator && navigator.userAgent
   				&& navigator.userAgent.match(/mobile/i)) {
   				args.unshift.apply(args, [
   					'+set', 'in_joystick', '1',
   					'+set', 'in_nograb', '1',
-  					'+set', 'in_mouse', '0',
+  					'+set', 'in_mouse', '0'
   				])
   			}
   			//if(window.location.hostname.match(/quake\.games/i)) {
   				args.unshift.apply(args, [
   					'+set', 'net_socksServer', 'proxy.quake.games',
-  					'+set', 'net_socksPort', '443',
+  					'+set', 'net_socksPort', '443'
   				])
   			/*} else {
   				args.unshift.apply(args, [

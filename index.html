@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="quakejs-bnw.png">
@@ -90,7 +90,7 @@
 				#loading-progress .description {
 					text-align: center;
 					color: #fff;
-					font-family: "Open Sans";
+					font-family: "Open Sans", sans-serif;
 					text-shadow: 1px 1px 2px #000;
 					text-transform: uppercase;
 				}
@@ -114,7 +114,6 @@
 				#flipper {
 					animation: rotatequake 1s infinite ease-in-out;
 					transform-style: preserve-3d;
-					position: relative;
 					height: 100%;
 					width: 100%;
 					position: absolute;
@@ -209,7 +208,7 @@
 				};
 				Module['viewport'] = document.getElementById('viewport-frame');
 				Module['elementPointerLock'] = true;
-				Module['onRuntimeInitialized'] = () => {};
+				Module['onRuntimeInitialized'] = function() {};
 			};
 		</script>
 		<script type="text/javascript" src="nipplejs.js"></script>
