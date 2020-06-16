@@ -15224,7 +15224,7 @@ function copyTempDouble(ptr) {
   		},DownloadAsset:function (asset, onprogress, onload) {
   			var root = SYSC.GetCDN();
   			var name = asset.name.replace(/(.+\/|)(.+?)$/, '$1' + asset.checksum + '-$2');
-  			var url = 'https://emupedia.net/emupedia-data-quake3/' + name;
+  			var url = '//' + (window.location.hostname !== 'localhost' ? window.location.hostname : 'emupedia.net') + '/emupedia-data-quake3/' + name;
 
   			SYS.DoXHR(url, {
   				dataType: 'arraybuffer',
